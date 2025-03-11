@@ -1,10 +1,13 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:tasks/presentation/Home/data/models/tasks.dart';
 
 enum TaskFilter { all, today, important, completed }
 
 class TaskListViewModel extends ChangeNotifier {
+  final searchController = TextEditingController();
+
   List<Task> _tasks = [];
+  List<Task> searchedTasks = [];
   TaskFilter _currentFilter = TaskFilter.all;
 
   TaskListViewModel() {
@@ -86,7 +89,6 @@ class TaskListViewModel extends ChangeNotifier {
 // Using the copyWith method (likely from a data class or immutable model pattern)
 // Inverting the current isCompleted status with the ! operator
 
-
 // It replaces the old task with the updated one at the same position in the list.
 // Finally, it calls notifyListeners() to notify any listeners (like UI components) that the data has changed.
 // */
@@ -107,6 +109,13 @@ class TaskListViewModel extends ChangeNotifier {
 
   void deleteTask(String taskId) {
     _tasks.removeWhere((task) => task.id == taskId);
+    notifyListeners();
+  }
+
+  void searchForTask(String searcherChar) {
+    searchedTasks = tasks
+        .where((task) => task.title.toLowerCase().contains(searcherChar))
+        .toList();
     notifyListeners();
   }
 }

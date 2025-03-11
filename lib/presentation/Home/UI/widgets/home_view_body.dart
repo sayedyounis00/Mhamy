@@ -5,17 +5,24 @@ import 'package:tasks/presentation/Home/UI/widgets/filter_section.dart';
 import 'package:tasks/presentation/Home/UI/widgets/painter.dart';
 import 'package:tasks/presentation/Home/UI/widgets/progress_bar_setion.dart';
 import 'package:tasks/presentation/Home/UI/widgets/search_title_bar.dart';
-import 'package:tasks/presentation/Home/UI/widgets/task_item.dart';
 import 'package:tasks/presentation/Home/logic/task_provider.dart';
+import 'package:tasks/presentation/Home/UI/widgets/task_item.dart';
 
-class HomeViewBody extends StatelessWidget {
+class HomeViewBody extends StatefulWidget {
   const HomeViewBody({
     super.key,
   });
 
   @override
+  State<HomeViewBody> createState() => _HomeViewBodyState();
+}
+
+class _HomeViewBodyState extends State<HomeViewBody> {
+  @override
   Widget build(BuildContext context) {
     final viewModel = Provider.of<TaskListViewModel>(context);
+    final alltasks = viewModel.tasks;
+    final searchedTasks = viewModel.searchedTasks;
 
     return Stack(
       children: [
@@ -70,13 +77,17 @@ class HomeViewBody extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      SearchAndTitleBar(viewModel: viewModel),
+                      const SearchAndTitleBar(),
                       Expanded(
                         child: ListView.builder(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
-                          itemCount: viewModel.tasks.length,
+                          itemCount: viewModel.searchController.text.isEmpty
+                              ? alltasks.length
+                              : searchedTasks.length,
                           itemBuilder: (context, index) {
-                            final task = viewModel.tasks[index];
+                            final task = viewModel.searchController.text.isEmpty
+                                ? alltasks[index]
+                                : searchedTasks[index];
                             return TaskItemWidget(
                               task: task,
                               onToggle: () =>
