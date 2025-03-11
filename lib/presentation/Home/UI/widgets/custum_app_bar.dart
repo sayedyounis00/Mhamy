@@ -37,18 +37,6 @@ class CustumAppBar extends StatelessWidget {
               ),
             ],
           ),
-          GestureDetector(
-            child: const CircleAvatar(
-              radius: 24,
-              backgroundColor: Colors.white24,
-              child: Icon(
-                Icons.person_outline,
-                color: Colors.white,
-              ),
-            ),
-            onTap: (){} 
-          
-          ),
         ],
       ),
     );

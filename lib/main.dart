@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/presentation/Home/UI/home_view.dart';
 
 void main() {
   runApp(const TodoApp());
@@ -10,7 +11,7 @@ class TodoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(),
+      home: HomeScreen(),
     );
   }
 }
