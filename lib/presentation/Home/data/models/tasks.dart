@@ -19,7 +19,6 @@ extension TaskPriorityExtension on TaskPriority {
            toString().split('.').last.substring(1).toLowerCase();
   }
 }
-
 class Task {
   final String id;
   final String title;

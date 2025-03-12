@@ -7,7 +7,9 @@ import 'package:tasks/presentation/Home/logic/task_provider.dart';
 class SearchAndTitleBar extends StatefulWidget {
   const SearchAndTitleBar({
     super.key,
+    required this.searchController,
   });
+  final TextEditingController searchController;
 
   @override
   State<SearchAndTitleBar> createState() => _SearchAndTitleBarState();

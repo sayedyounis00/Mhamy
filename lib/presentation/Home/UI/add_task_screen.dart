@@ -35,7 +35,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
         time: _timeController.text,
         priority: _priority,
       );
-      //? adding task to list and navigate Back
       Provider.of<TaskListViewModel>(context, listen: false).addTask(task);
       Navigator.pop(context);
     }

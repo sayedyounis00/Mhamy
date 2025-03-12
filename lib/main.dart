@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:tasks/presentation/Home/UI/home_view.dart';
+import 'package:tasks/presentation/Home/logic/task_provider.dart';
 
 void main() {
   runApp(const TodoApp());
@@ -10,8 +12,11 @@ class TodoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomeScreen(),
+    return ChangeNotifierProvider(
+      create:(context) => TaskListViewModel(),
+      child: const MaterialApp(
+        home: HomeScreen(),
+      ),
     );
   }
 }
