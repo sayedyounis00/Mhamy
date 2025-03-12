@@ -36,7 +36,6 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             ),
           ),
         ),
-
         // Background pattern
         Positioned.fill(
           child: Opacity(
@@ -77,7 +76,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                   ),
                   child: Column(
                     children: [
-                      const SearchAndTitleBar(),
+                      SearchAndTitleBar(
+                        searchController: viewModel.searchController,
+                      ),
                       Expanded(
                         child: ListView.builder(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
