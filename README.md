@@ -1,16 +1,26 @@
-# tasks
+# TaskMaster - Flutter Task Manager 🚀
 
-A new Flutter project.
+![Flutter](https://img.shields.io/badge/Flutter-3.19-blue?style=flat&logo=flutter)
+![Provider](https://img.shields.io/badge/State%20Management-Provider-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Getting Started
+A modern task management app built with Flutter and Provider state management. Organize tasks with priorities, deadlines, and progress tracking.
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img src="![1](https://github.com/user-attachments/assets/2516761b-9322-4ea3-9870-75df752e784b)" width="200" alt="Task List">
 
-A few resources to get you started if this is your first Flutter project:
+  <img src="screenshots/IMG-20250401-WA0002.jpg" width="200" alt="Task Progress">
+  <img src="screenshots/WhatsApp Image 2025-04-01 at 07.00.30_0f4938ce.jpg" width="200" alt="Time Picker">
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features ✨
+- ✅ Create/Edit/Delete tasks
+- 🚨 Priority levels (High/Medium/Low)
+- ⏰ Time scheduling with intuitive picker
+- 📊 Progress tracking dashboard
+- 📱 Responsive UI for all screen sizes
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation 🛠️
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/taskmaster-flutter.git
