@@ -7,10 +7,9 @@
 A modern task management app built with Flutter and Provider state management. Organize tasks with priorities, deadlines, and progress tracking.
 
 <p align="center">
-  <img src="![1](https://github.com/user-attachments/assets/2516761b-9322-4ea3-9870-75df752e784b)" width="200" alt="Task List">
-
-  <img src="screenshots/IMG-20250401-WA0002.jpg" width="200" alt="Task Progress">
-  <img src="screenshots/WhatsApp Image 2025-04-01 at 07.00.30_0f4938ce.jpg" width="200" alt="Time Picker">
+  <img src="screenshots/1.jpg" width="200" alt="Task Screen">
+  <img src="screenshots/3.jpg" width="200" alt="Add tasks">
+  <img src="screenshots/5.jpg" width="200" alt="Time picker">
 </p>
 
 ## Features ✨
@@ -23,4 +22,4 @@ A modern task management app built with Flutter and Provider state management. O
 ## Installation 🛠️
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/taskmaster-flutter.git
+   git clone https://github.com/sayedyounis00/Mhamy.git
